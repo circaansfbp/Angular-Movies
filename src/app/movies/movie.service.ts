@@ -14,6 +14,10 @@ export class MovieService {
   }
 
   getMovies(movieTitle: string, movieYear: string) {
-    return this.http.get(`${this.URI}s=${movieTitle}&y=${movieYear}&page=1`)
+    return this.http.get(`${this.URI}s=${movieTitle}&y=${movieYear}&type=movie`)
+  }
+
+  getMovieData(movieID: string) {
+    return this.http.get(`${this.URI}i=${movieID}`);
   }
 }

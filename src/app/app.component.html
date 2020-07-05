@@ -1,3 +1,4 @@
+<!--Jumbotron-->
 <div class="jumbotron jumbotron-fluid">
   <div class="container-fluid">
     <h1 class="display-4">{{title}}</h1>
@@ -5,5 +6,21 @@
     <hr class="my-4">
   </div>
 </div>
-<app-search-fields></app-search-fields>
-<app-movie-card></app-movie-card>
+
+<!--Inputs-->
+<div class="row" id="inputs">
+  <div class="col-md-4">
+    <label for="movie-title">Título: </label>
+    <input type="text" id="movie-title" required [(ngModel)]="movieTitle">
+  </div>
+  <div class="col-md-4">
+    <label for="movie-year">Año: </label>
+    <input type="text" id="movie-year" [(ngModel)]="movieYear">
+  </div>
+  <div class="col-md-4">
+    <button type="submit" class="btn btn-primary" (click)="searchMovies()">Buscar</button>
+  </div>
+</div>
+
+<!--Movie Cards-->
+<app-movie-card *ngIf="movieData" [movies]="movieData"></app-movie-card>

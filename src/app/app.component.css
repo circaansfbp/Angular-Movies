@@ -1,3 +1,7 @@
+#inputs {
+    max-width: 100vw;
+}
+
 .jumbotron {
     background-color: #3C6E71;  
 }
