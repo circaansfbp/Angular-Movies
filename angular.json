@@ -25,7 +25,6 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/font-awesome/css/font-awesome.css",
               "src/styles.css"
             ],
             "scripts": [
@@ -126,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "Movies"
+  "defaultProject": "Movies",
+  "cli": {
+    "analytics": "19c83842-2302-47ea-8151-397f4d95e127"
+  }
 }

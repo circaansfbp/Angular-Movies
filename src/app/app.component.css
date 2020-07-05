@@ -1,0 +1,22 @@
+.jumbotron {
+    background-color: #3C6E71;  
+}
+
+.jumbotron .container-fluid {
+    color: #ffffff;
+    padding-left: 5%;
+    font-family: 'MuseoModerno', cursive;
+}
+
+.my-4 {
+    background-color: #ffffff;
+    margin-right: 27%;
+}
+
+h1 {
+    font-size: 8vw;
+}
+
+p {
+    font-size: 2.5vw;
+}
