@@ -14,24 +14,25 @@ export class RatingComponent implements OnChanges {
   constructor() { }
 
   ngOnChanges(): void {
-    this.rottenTomatoes = this.ratings[1].Value;
+    if (this.ratings.length < 2) {
+      console.log("No rating from rotten tomatoes!");
+    } else {
+      this.rottenTomatoes = this.ratings[1].Value;
+      this.rottenTomatoes = this.rottenTomatoes.replace("%", "");
 
-    console.log(this.rottenTomatoes);
+      if (Number(this.rottenTomatoes) >= 0 && Number(this.rottenTomatoes) < 20) this.stars = 1;
 
-    this.rottenTomatoes = this.rottenTomatoes.replace("%", "");
-    
-    if (Number(this.rottenTomatoes) >= 0 && Number(this.rottenTomatoes) < 20) this.stars = 1;
-      
-    else if (Number(this.rottenTomatoes) >= 20 && Number(this.rottenTomatoes) < 40) this.stars = 2;
-      
-    else if (Number(this.rottenTomatoes) >= 40 && Number(this.rottenTomatoes) < 60) this.stars = 3;
+      else if (Number(this.rottenTomatoes) >= 20 && Number(this.rottenTomatoes) < 40) this.stars = 2;
 
-    else if (Number(this.rottenTomatoes) >= 60 && Number(this.rottenTomatoes) < 80) this.stars = 4;
+      else if (Number(this.rottenTomatoes) >= 40 && Number(this.rottenTomatoes) < 60) this.stars = 3;
 
-    else this.stars = 5;
+      else if (Number(this.rottenTomatoes) >= 60 && Number(this.rottenTomatoes) < 80) this.stars = 4;
 
-    this.icons = new Array(this.stars).fill(1);
-    
+      else this.stars = 5;
+
+      this.icons = new Array(this.stars).fill(1);
+    }
+
   }
 
 }

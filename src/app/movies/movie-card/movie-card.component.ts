@@ -15,16 +15,20 @@ export class MovieCardComponent implements OnChanges {
   constructor(private movieService: MovieService) { }
 
   ngOnChanges(): void {
-    this.dataArray = this.movies.Search;
+    if (this.movies.Response === "False") {
+      alert("No se encontraron películas para los parámetros ingresados!");
+    } else {
+      this.dataArray = this.movies.Search;
 
-    if (this.movieArray.length > 0) this.movieArray = [];
+      if (this.movieArray.length > 0) this.movieArray = [];
 
-    this.dataArray.forEach(movie => {
-      this.movieService.getMovieData(movie.imdbID)
-        .subscribe(res => {
-          this.movieArray.push(res);
-        });
-    });
+      this.dataArray.forEach(movie => {
+        this.movieService.getMovieData(movie.imdbID)
+          .subscribe(res => {
+            this.movieArray.push(res);
+          });
+      });
+    }
 
   }
 }

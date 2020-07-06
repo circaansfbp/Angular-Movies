@@ -3,22 +3,30 @@
   <div class="container-fluid">
     <h1 class="display-4">{{title}}</h1>
     <p class="lead">Encuentra la información de tus películas favoritas aquí!</p>
-    <hr class="my-4">
+    <i class="fa fa-film" id="page-logo"></i>
   </div>
 </div>
 
 <!--Inputs-->
-<div class="row" id="inputs">
-  <div class="col-md-4">
-    <label for="movie-title">Título: </label>
-    <input type="text" id="movie-title" required [(ngModel)]="movieTitle">
+<div class="container">
+  <div class="row" id="inputs">
+    <div class="col-md-6" id="titleDiv">
+      <label for="movie-title">Título: </label>
+      <input type="text" id="movie-title" required [(ngModel)]="movieTitle">
+    </div>
+    <div class="col-md-6" id="yearDiv">
+      <label for="movie-year">Año: </label>
+      <input type="text" id="movie-year" [(ngModel)]="movieYear">
+      <button type="submit" class="btn btn-danger" (click)="searchMovies()"><i
+            class="fa fa-search"></i></button>
+    </div>
   </div>
-  <div class="col-md-4">
-    <label for="movie-year">Año: </label>
-    <input type="text" id="movie-year" [(ngModel)]="movieYear">
-  </div>
-  <div class="col-md-4">
-    <button type="submit" class="btn btn-primary" (click)="searchMovies()">Buscar</button>
+</div>
+
+<!--Al cargar la página-->
+<div class="cont" *ngIf="showHint">
+  <div class="row">
+    <h2>Ingresa arriba la película que deseas buscar!</h2>
   </div>
 </div>
 

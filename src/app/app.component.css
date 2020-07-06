@@ -1,26 +1,85 @@
 #inputs {
-    max-width: 100vw;
+    max-width: 100%;
+}
+
+#titleDiv {
+    text-align: end;
+}
+
+#page-logo {
+    font-size: 160px;
+    width: 170px;
+    height: 170px;
+    right: 180px;
+    bottom: 100px;
 }
 
 .jumbotron {
-    background-color: #3C6E71;  
+    background-color: #9a031e;  
+    height: 250px;
+    padding-top: 3.5vh;
+    margin-bottom: 0px;
 }
 
 .jumbotron .container-fluid {
+    position: relative;
     color: #ffffff;
     padding-left: 5%;
     font-family: 'MuseoModerno', cursive;
 }
 
-.my-4 {
-    background-color: #ffffff;
-    margin-right: 27%;
+.container {
+    padding-top: 15px;
+    height: 60px;
+    border-bottom: 1px ridge #9a031e;
+    margin-bottom: 40px;
 }
 
 h1 {
-    font-size: 8vw;
+    font-size: 6.5vw;
 }
 
 p {
     font-size: 2.5vw;
 }
+
+label {
+    padding-right: 10px;
+    color: #9a031e;
+}
+
+button {
+    position: relative;
+    height: 30px;
+    width: 40px;
+    border-radius: 25px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+i {
+    position: absolute;
+    top: 6%;
+    bottom: 1%;
+    right: 2%;
+    font-size: 20px;
+    color: #ffffff;
+    height: 30px;
+    width: 40px;
+}
+
+input {
+    border: .5px solid #e36414;
+    background-color: #e36414;
+    color: #ffffff;
+}
+
+h2 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 4vw;
+    padding: 60px 100px;
+    text-align: center;
+}
+
+
+
