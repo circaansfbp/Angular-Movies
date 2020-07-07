@@ -3,8 +3,10 @@
         <div class="col-md-6" *ngFor="let movie of movieArray">
             <div class="card mb-3">
                 <div class="row no-gutters">
-                    <div class="col-md-4"> <!--¿QUÉ HACER CUANDO NO CONSIGUE EL POSTER DE LA PELÍCULA?-->
-                        <img src="{{movie.Poster}}" alt="Movie Poster" class="card-img">
+                    <div class="col-md-4">
+                        <!--¿QUÉ HACER CUANDO NO CONSIGUE EL POSTER DE LA PELÍCULA?-->
+                        <img src="{{movie.Poster}}" alt="Movie Poster" class="card-img"
+                            onerror="this.src='../../assets/bitmap.png'">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

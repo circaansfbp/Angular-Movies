@@ -10,12 +10,13 @@ export class RatingComponent implements OnChanges {
   rottenTomatoes: string;
   stars: number = 0;
   icons: any = new Array(this.stars).fill(1);
+  showRating: boolean = true;
 
   constructor() { }
 
   ngOnChanges(): void {
     if (this.ratings.length < 2) {
-      console.log("No rating from rotten tomatoes!");
+      this.showRating = false;
     } else {
       this.rottenTomatoes = this.ratings[1].Value;
       this.rottenTomatoes = this.rottenTomatoes.replace("%", "");
