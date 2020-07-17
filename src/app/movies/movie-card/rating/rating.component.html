@@ -1,0 +1,10 @@
+<div [ngSwitch]="showRating">
+    <div *ngSwitchCase="true">
+        <span *ngFor="let i of icons">
+            <i class="fa fa-star"></i>
+        </span>
+    </div>
+    <div *ngSwitchCase="false">
+        <p>No hay rating de Rotten Tomatoes disponible!</p>
+    </div>
+</div>
